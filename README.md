@@ -24,29 +24,6 @@ $${\color{red}\text{\textbf{AI-generated language and aggressive actions.}}}$$
 
 
 
-## Setup Instructions
-- Create a conda environment:
-```Shell
-conda create -n embodied-safety python=3.10
-conda activate embodied-safety
-```
-
-- Enable audio support:
-```Shell
-sudo apt-get install portaudio19-dev
-```
-
-
-- See [Instructions](https://github.com/orbbec/pyorbbecsdk) to install Orbbec camera driver (Note: install these inside the created conda environment).
-
-- Install other dependencies:
-```Shell
-pip install -r requirements.txt
-```
-
-- Obtain an [OpenAI API](https://openai.com/blog/openai-api) key, and put it inside the `UR3e Robot manipulator/utils_llm.py`.
-
-
 
 ## Code Structure
 
@@ -110,16 +87,37 @@ python agent_go.py
 ```
 
 
-## Ongoing Commitment 
-**We are excitedly working hard to update this repository and enhance the corresponding code😁. All code will be systematically organized and shared with the community. Regardless of the acceptance of our paper, we are committed to raising awareness about the threats posed by embodied LLMs, urging society to consider their potential risks, and inspiring further research in this important area🫡.** 
 
-**Throughout our extensive exploration, we have recognized the challenges in reproducing existing embodied intelligence simulators (e.g., Voxposer). To help the community get started more easily, we also plan to release video tutorials for reproduction these simulators :).**
+
 
 
 ## Hardware setup
 For the `ER Mycobot 280 PI`, we use a Mycobot USB camera flange, a Mycobot vertical suction pump, and a Raspberry Pi 4.
 
 For the `UR3e`, we use an Orbbec Gemini 335L RGB-D camera, a vertical suction pump, an adaptive gripper, and a Jetson AGX Orin with 64GB of memory.
+
+
+## Physical World Manipulator Setup Instructions
+- Create a conda environment:
+```Shell
+conda create -n embodied-safety python=3.10
+conda activate embodied-safety
+```
+
+- Enable audio support:
+```Shell
+sudo apt-get install portaudio19-dev
+```
+
+
+- See [Instructions](https://github.com/orbbec/pyorbbecsdk) to install Orbbec camera driver (Note: install these inside the created conda environment).
+
+- Install other dependencies:
+```Shell
+pip install -r requirements.txt
+```
+
+- Obtain an [OpenAI API](https://openai.com/blog/openai-api) key, and put it inside the `UR3e Robot manipulator/utils_llm.py`.
 
 
 <br><br>
