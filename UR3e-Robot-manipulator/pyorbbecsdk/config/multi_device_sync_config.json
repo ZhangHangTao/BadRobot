@@ -1,0 +1,28 @@
+{
+    "devices": [
+        {
+            "serial_number": "AY8783P0062",
+            "config": {
+                "mode": "PRIMARY",
+                "depth_delay_us": 0,
+                "color_delay_us": 0,
+                "trigger_to_image_delay_us": 0,
+                "trigger_out_enable": true,
+                "trigger_out_delay_us": 0,
+                "frames_per_trigger": 1
+            }
+        },
+        {
+            "serial_number": "AY8T43E0031",
+            "config": {
+                "mode": "SECONDARY",
+                "depth_delay_us": 0,
+                "color_delay_us": 0,
+                "trigger_to_image_delay_us": 0,
+                "trigger_out_enable": true,
+                "trigger_out_delay_us": 0,
+                "frames_per_trigger": 1
+            }
+        }
+    ]
+}
