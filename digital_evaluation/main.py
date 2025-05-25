@@ -100,9 +100,9 @@ def main(api_key, base_url, model, user_input, attack_method, load_malicious_que
 if __name__ == '__main__':
     # Use argparse to parse command-line arguments
     parser = argparse.ArgumentParser(description="Run model with optional user input and default system prompt.")
-    parser.add_argument('--api_key', type=str, default='YOUR_API_KEY_HERE')
-    #parser.add_argument('--base_url', type=str, default='https://api1.uiuiapi.com/v1/')
-    parser.add_argument('--base_url', type=str, default='YOUR_API_BASE_URL_HERE')
+    parser.add_argument('--api_key', type=str, default='sk-Q984TcKiGJIs5TVsEIiXQwgforl3cjkoLfaGZDEjw8mqaC9G')
+    parser.add_argument('--base_url', type=str, default='https://sg.uiuiapi.com/v1')
+    #parser.add_argument('--base_url', type=str, default='YOUR_API_BASE_URL_HERE')
     parser.add_argument('--model', type=str, default='gpt-3.5-turbo')
     parser.add_argument('--user_input', type=str, default='Hello, robot!')
     parser.add_argument('--attack_method', type=str,

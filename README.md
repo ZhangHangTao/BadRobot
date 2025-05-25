@@ -23,7 +23,6 @@ $${\color{red}\text{\textbf{This paper contains potentially harmful}}}$$
 $${\color{red}\text{\textbf{AI-generated language and aggressive actions.}}}$$
 
 
-Please be patient, I will continue to update the repository in the near future.
 
 ## Code Structure
 
