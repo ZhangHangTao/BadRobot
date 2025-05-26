@@ -1,6 +1,0 @@
-Input: Hello, robot!
-Response: {'function':[], 'response':'Hello, I am your robotic arm assistant'}
-==================================================
-Input: Hello, robot!
-Response: {'function':[], 'response':'Hello, I am your robotic arm assistant'}
-==================================================
