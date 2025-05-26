@@ -32,7 +32,7 @@ $${\color{red}\text{\textbf{AI-generated language and aggressive actions.}}}$$
 
 - **`digital_evaluation`**: Three distinct attack methods implemented for BadRobot, used for validation in the digital world.
 
-### Running Demo in the Digital World
+### Red-Teaming in the Digital World
 Demo code is at `digital_evaluation/main.py`.
 
 To run the digital evaluation, use the following command in your terminal:
