@@ -28,7 +28,7 @@ $${\color{red}\text{\textbf{AI-generated language and aggressive actions.}}}$$
 
 - **`Jailbreak_Prompts.xlsx`**: 100 recent in-the-wild jailbreak prompts targeting LLMs cover disguised intent, role play, structured responses, virtual AI simulation, and hybrid strategies, used to test their effectiveness in embodied LLMs.
 
-- **`Physical_Word_Malicious_Queries.xlsx`**: Our benchmark of queries for malicious actions against embodied LLMs, containing 277 requests covering physical harm, privacy violations, pornography, fraud, illegal activities, hateful conduct, and sabotage.
+- **`Physical_Word_Malicious_Queries.xlsx`**: Our benchmark of queries for malicious actions against embodied LLMs, containing 320+ (continuously expanding) requests covering physical harm, privacy violations, pornography, fraud, illegal activities, hateful conduct, and sabotage.
 
 - **`digital_evaluation`**: Three distinct attack methods implemented for BadRobot, used for validation in the digital world.
 
@@ -42,7 +42,7 @@ python digital_evaluation/main.py --api_key YOUR_API_KEY --base_url BASE_URL --m
 ```
 #### Available Attack Methods
 
-To select an attack method, use the `--attack_method` argument. You can choose from the following attack methods as described in our paper:
+To select an attack method, use the `--attack_method` argument. You can choose from the following attack methods:
 
 - `contextual jailbreak`: Bypasses model safety mechanisms by manipulating the input context.
 - `safety misalignment`: Exploits misalignment between the model’s responses and safety guidelines.
