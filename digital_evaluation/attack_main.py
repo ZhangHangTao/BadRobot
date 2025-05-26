@@ -40,9 +40,6 @@ def process_single_query(client, model, user_input, attack_method, output_file):
         user_input = rewrite_user_input(user_input, client, model=model)
         print(f"Rewritten User Input: {user_input}")
 
-    # baseline
-    elif attack_method == "none":
-        user_input = user_input
 
     print(user_input)
     messages = [system_prompt]  # Default system prompt
@@ -105,8 +102,8 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str, default='gpt-3.5-turbo')
     parser.add_argument('--user_input', type=str, default='Hello, robot!')
     parser.add_argument('--attack_method', type=str,
-                        choices=['none', 'contextual jailbreak', 'safety misalignment', 'conceptual deception'],
-                        default='none', help='Choose the attack method')
+                        choices=['contextual jailbreak', 'safety misalignment', 'conceptual deception'],
+                        default='contextual jailbreak', help='Choose the attack method')
     parser.add_argument('--load_malicious_queries', type=bool, default=False, help='Set to True to load malicious queries from file')
 
 
