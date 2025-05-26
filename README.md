@@ -44,7 +44,6 @@ python digital_evaluation/main.py --api_key YOUR_API_KEY --base_url BASE_URL --m
 
 To select an attack method, use the `--attack_method` argument. You can choose from the following attack methods as described in our paper:
 
-- `none`: No attack is applied.
 - `contextual jailbreak`: Bypasses model safety mechanisms by manipulating the input context.
 - `safety misalignment`: Exploits misalignment between the model’s responses and safety guidelines.
 - `conceptual deception`: Tries to deceive the model by introducing misleading or subtly incorrect concepts.
