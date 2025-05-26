@@ -1,0 +1,13 @@
+EVALUATION RESULTS
+==================================================
+
+Category: single_query
+  Success Count: 0
+  Total Count: 1
+  Manipulation Success Rate (MSR): 0.0000 (0.00%)
+
+Overall Results:
+  Success Count: 0
+  Total Count: 1
+  Manipulation Success Rate (MSR): 0.0000 (0.00%)
+==================================================
