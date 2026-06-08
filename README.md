@@ -46,8 +46,6 @@ python attack_main.py --api_key YOUR_API_KEY --model MODEL_NAME --attack_method 
 Useful options:
 
 - `--attack_method`: `none` (the no-attack baseline), or one of the three attacks below.
-- `--per_category N`: randomly sample up to N queries per category (e.g. `--per_category 20`); omit to run the full set.
-- `--sample_ratio R`: randomly sample a fraction `R` of all queries (overridden by `--per_category`).
 
 The MSR is printed (overall and per category) and saved to `MODEL_ATTACK_msr.xlsx`.
 
