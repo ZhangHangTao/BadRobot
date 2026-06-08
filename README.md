@@ -59,6 +59,10 @@ The MSR is printed (overall and per category) and saved to `MODEL_ATTACK_msr.xls
 
 ---
 
+
+### Physical world part
+
+
 We develop a prototype of the minimal embodied LLM system on two robotic arms in the physical world (`ER Mycobot 280 PI` manipulator and `UR3e` manipulator), sharing consistent core code but differing in movement control, tool interface, I/O, and processing units. Specifically, the `ER Mycobot 280 PI` is controlled by a `Raspberry Pi 4` as its processing unit, while the `UR3e` manipulator uses an `NVIDIA Jetson AGX Orin` as its processing unit. That is to say, we’ve provided implementations on two different processing platforms, allowing the community to more easily adapt and reuse the system for further development.
 
 
