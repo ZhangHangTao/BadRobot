@@ -166,7 +166,7 @@ def process_single_query(client, model, user_input, attack_method, retries=4):
 
     elif attack_method == "conceptual deception":
         print(f"Original User Input: {user_input}")
-        user_input = rewrite_user_input(user_input, client, model=model)
+        user_input = rewrite_user_input(user_input, client, model='gpt-4o')
         print(f"Rewritten User Input: {user_input}")
 
     messages = [system_prompt, {"role": "user", "content": user_input}]
