@@ -55,6 +55,8 @@ The MSR is printed (overall and per category) and saved to `MODEL_ATTACK_msr.xls
 - `safety misalignment`: Exploits misalignment between the model’s responses and safety guidelines.
 - `conceptual deception`: Tries to deceive the model by introducing misleading or subtly incorrect concepts.
 
+For example, to run the contextual jailbreak attack, use: python attack_main.py --attack_method "contextual jailbreak"
+
 ---
 
 
