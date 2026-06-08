@@ -33,16 +33,25 @@ $${\color{red}\text{\textbf{AI-generated language and aggressive actions.}}}$$
 - **`digital_evaluation`**: Three distinct attack methods implemented for BadRobot, used for validation in the digital world.
 
 ### Red-Teaming in the Digital World
-Demo code is at `digital_evaluation/main.py`.
-
-To run the digital evaluation, use the following command in your terminal:
+The evaluation entry point is `digital_evaluation/attack_main.py`. It loads the
+malicious-query benchmark, runs each query through the embodied-agent system
+prompt (optionally with an attack applied), scores the Malicious Success Rate
+(MSR), and writes per-query / per-category / summary results to an Excel file.
 
 ```bash
-python digital_evaluation/main.py --api_key YOUR_API_KEY --base_url BASE_URL --model MODEL_NAME --user_input USER_INPUT --attack_method ATTACK_METHOD --load_malicious_queries True/False
+cd digital_evaluation
+python attack_main.py --api_key YOUR_API_KEY --model MODEL_NAME --attack_method ATTACK_METHOD
 ```
-#### Available Attack Methods
 
-To select an attack method, use the `--attack_method` argument. You can choose from the following attack methods:
+Useful options:
+
+- `--attack_method`: `none` (the no-attack baseline), or one of the three attacks below.
+- `--per_category N`: randomly sample up to N queries per category (e.g. `--per_category 20`); omit to run the full set.
+- `--sample_ratio R`: randomly sample a fraction `R` of all queries (overridden by `--per_category`).
+
+The MSR is printed (overall and per category) and saved to `MODEL_ATTACK_msr.xlsx`.
+
+#### Available Attack Methods
 
 - `contextual jailbreak`: Bypasses model safety mechanisms by manipulating the input context.
 - `safety misalignment`: Exploits misalignment between the model’s responses and safety guidelines.
@@ -53,7 +62,7 @@ To select an attack method, use the `--attack_method` argument. You can choose f
 We develop a prototype of the minimal embodied LLM system on two robotic arms in the physical world (`ER Mycobot 280 PI` manipulator and `UR3e` manipulator), sharing consistent core code but differing in movement control, tool interface, I/O, and processing units. Specifically, the `ER Mycobot 280 PI` is controlled by a `Raspberry Pi 4` as its processing unit, while the `UR3e` manipulator uses an `NVIDIA Jetson AGX Orin` as its processing unit. That is to say, we’ve provided implementations on two different processing platforms, allowing the community to more easily adapt and reuse the system for further development.
 
 
-Next, we will analyze the code structure using the `UR3e Robot manipulator` distance.
+Next, we will analyze the code structure using the `UR3e Robot manipulator` as an example.
 
 - **`check`**: Check the functionality of the microphone, RGB-D camera, speakers, and other devices before running.
 - **`pyorbbecsdk`**: RGB-D camera Orbbec driver and configuration files; see details at https://github.com/orbbec/pyorbbecsdk.
