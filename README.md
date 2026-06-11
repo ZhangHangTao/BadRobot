@@ -6,6 +6,34 @@
 <p align='center';>
 ICLR 2025<br>
 </p>
+
+<p align='center'>
+  <a href="https://huggingface.co/papers/2407.20242"><img src="https://img.shields.io/badge/Hugging%20Face-Paper-yellow?logo=huggingface" alt="HF Paper"></a>
+  <a href="https://huggingface.co/datasets/Hangtao/badrobot-malicious-queries"><img src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow?logo=huggingface" alt="HF Dataset"></a>
+</p>
+
+## Hugging Face Datasets
+
+We have organized the BadRobot malicious-query benchmark and ready-to-use jailbreak prompts on Hugging Face:
+[`Hangtao/badrobot-malicious-queries`](https://huggingface.co/datasets/Hangtao/badrobot-malicious-queries).
+
+```python
+from datasets import load_dataset
+
+# Direct malicious-query benchmark
+direct = load_dataset("Hangtao/badrobot-malicious-queries", split="train")
+
+# Jailbreak prompts generated with the three BadRobot attack methods
+conceptual = load_dataset("Hangtao/badrobot-malicious-queries", "conceptual_deception_attack", split="train")
+contextual = load_dataset("Hangtao/badrobot-malicious-queries", "contextual_jailbreak_attack", split="train")
+safety = load_dataset("Hangtao/badrobot-malicious-queries", "safety_misalignment_attack", split="train")
+
+print(direct[0]["request"])
+print(conceptual[0]["prompt"])
+print(contextual[0]["prompt"])
+print(safety[0]["prompt"])
+```
+
 <!-- <p align='center' style="text-align:center;font-size:2.5 em;">
 <b>
     <a href="https://drive.google.com/file/d/1z8G-XWQOw9H5v4iP_2-ccSO1ZdznIOBP/view?usp=sharing" target="_blank" style="text-decoration: none;">[arXiv]</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://embodied-ai-safety.github.io/" target="_blank" style="text-decoration: none;">[Project Page]
